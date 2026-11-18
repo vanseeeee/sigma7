@@ -6,7 +6,7 @@ namespace Sigma7
 
         public CrewMember(string name)
         {
-            Name = "UNKNOWN";
+            Name = name;
         }
     }
 }

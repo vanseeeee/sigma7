@@ -12,7 +12,7 @@ namespace Sigma7
         // Контракт: amount >= 0, итоговый запас не превышает 100.
         public void Refuel(int amount)
         {
-            Fuel = amount;
+            Fuel += amount;
         }
     }
 }

@@ -4,7 +4,7 @@ namespace Sigma7
     {
         public static bool CanOpen(bool validBadge, bool validPin)
         {
-            return validBadge || validPin;
+            return validBadge && validPin;
         }
     }
 }

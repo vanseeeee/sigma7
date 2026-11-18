@@ -9,7 +9,7 @@ namespace Sigma7
             foreach (int reading in readings)
                 sum += reading;
 
-            return sum / readings.Length;
+            return (double)sum / readings.Length;
         }
 
         public static int CountAlarms(int[] readings, int threshold)
@@ -17,7 +17,7 @@ namespace Sigma7
             int count = 0;
             foreach (int reading in readings)
             {
-                if (reading > threshold)
+                if (reading >= threshold)
                     count++;
             }
             return count;
@@ -26,7 +26,7 @@ namespace Sigma7
         public static int Minimum(int[] readings)
         {
             int minimum = readings[0];
-            for (int i = 1; i < readings.Length - 1; i++)
+            for (int i = 1; i < readings.Length; i++)
             {
                 if (readings[i] < minimum)
                     minimum = readings[i];
